@@ -29,7 +29,7 @@ const Header = () => {
     <header>
       {menu && (
         <div className="absolute left-0 top-0 z-10 h-full w-[80%] bg-[#1E1E2D] px-8 py-4 text-white md:w-[23%]">
-          <div className="flex justify-between items-center flex-wrap">
+          <div className="flex flex-wrap items-center justify-between">
             <h3 className="text-3xl font-extrabold uppercase">Dashboard</h3>
             <IoIosArrowBack
               className="h-7 w-7 cursor-pointer text-[#6993FF] hover:scale-95"
@@ -76,7 +76,7 @@ const Header = () => {
           </div>
         </div>
       )}
-      <div className="flex h-20 items-center justify-between gap-4 px-4">
+      <div className="flex h-20 items-center justify-between gap-4 bg-white px-4">
         <button onClick={handleMenuShow}>
           <GiHamburgerMenu className="h-7 w-7 cursor-pointer text-[#6993FF] hover:scale-95" />
         </button>
@@ -94,7 +94,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className="border-b-2"></div>
+      <div className="border-b"></div>
     </header>
   );
 };

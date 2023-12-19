@@ -1,6 +1,6 @@
 const SunHeader = () => {
   return (
-    <section className="flex flex-col gap-4 py-4 md:flex-row h-16 items-center justify-between px-4">
+    <section className="flex h-16 flex-col items-center justify-between gap-4 bg-white px-4 py-4 md:flex-row">
       <div className="flex items-center gap-12">
         <p className="cursor-pointer font-medium">Dashboard</p>
         <div className="h-7 border-r"></div>
