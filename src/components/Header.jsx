@@ -29,7 +29,7 @@ const Header = () => {
     <header>
       {menu && (
         <div className="absolute left-0 top-0 z-10 h-full w-[80%] bg-[#1E1E2D] px-8 py-4 text-white md:w-[23%]">
-          <div className="flex flex-wrap items-center justify-between">
+          <div className="flex items-center justify-between md:flex-wrap">
             <h3 className="text-3xl font-extrabold uppercase">Dashboard</h3>
             <IoIosArrowBack
               className="h-7 w-7 cursor-pointer text-[#6993FF] hover:scale-95"
@@ -42,13 +42,13 @@ const Header = () => {
           </div>
           <p className="mb-6 text-xs uppercase text-[#4A4B68]">custom</p>
           <div>
-            <div className="flex w-full items-center gap-4">
+            <div
+              className="flex w-full cursor-pointer items-center gap-4"
+              onClick={handleSubMenuShow}
+            >
               <TfiLayoutGrid2Alt className="text-[#6993FF]" />
               <p>Applications</p>
-              <FaChevronDown
-                className="ml-auto cursor-pointer"
-                onClick={handleSubMenuShow}
-              />
+              <FaChevronDown className="ml-auto" />
             </div>
             {subMenu && (
               <div>
