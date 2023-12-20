@@ -1,4 +1,5 @@
 import { GoDotFill } from "react-icons/go";
+import { widget2 } from "../constants/widget2.js";
 
 const Widget2 = () => {
   return (
@@ -12,42 +13,19 @@ const Widget2 = () => {
           </div>
         </div>
         <div className="flex flex-col gap-4">
-          <div className="flex gap-2">
-            <div className="h-10 w-10 rounded-xl bg-[#EEE5FF]"></div>
-            <div className="flex flex-col">
-              <p className="text-sm font-medium">Briviba Saas</p>
-              <p className="text-xs font-medium text-[#B5B5C3]">
-                PHP, SQLite, Artisan Climm
-              </p>
-            </div>
-          </div>
-          <div className="flex gap-2">
-            <div className="h-10 w-10 rounded-xl bg-[#FFF4DE]"></div>
-            <div className="flex flex-col">
-              <p className="text-sm font-medium">Briviba Saas</p>
-              <p className="text-xs font-medium text-[#B5B5C3]">
-                PHP, SQLite, Artisan Climm
-              </p>
-            </div>
-          </div>
-          <div className="flex gap-2">
-            <div className="h-10 w-10 rounded-xl bg-[#C9F7F5]"></div>
-            <div className="flex flex-col">
-              <p className="text-sm font-medium">Briviba Saas</p>
-              <p className="text-xs font-medium text-[#B5B5C3]">
-                PHP, SQLite, Artisan Climm
-              </p>
-            </div>
-          </div>
-          <div className="flex gap-2">
-            <div className="h-10 w-10 rounded-xl bg-[#FFE2E5]"></div>
-            <div className="flex flex-col">
-              <p className="text-sm font-medium">Briviba Saas</p>
-              <p className="text-xs font-medium text-[#B5B5C3]">
-                PHP, SQLite, Artisan Climm
-              </p>
-            </div>
-          </div>
+          {widget2.map((color, index) => {
+            return (
+              <div className="flex gap-2" key={index}>
+                <div className={`h-10 w-10 rounded-xl bg-[#${color}]`}></div>
+                <div className="flex flex-col">
+                  <p className="text-sm font-medium">Briviba Saas</p>
+                  <p className="text-xs font-medium text-[#B5B5C3]">
+                    PHP, SQLite, Artisan Climm
+                  </p>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
