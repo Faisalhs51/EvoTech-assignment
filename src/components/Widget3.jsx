@@ -52,7 +52,7 @@ const Widget3 = () => {
                   <p className="text-sm font-medium text-[#B5B5C3]">Paid</p>
                 </div>
                 <div
-                  className={`rounded-lg bg-[#${item.statusBg}] p-2 text-xs font-medium text-[#${item.statusColor}] md:mx-8`}
+                  className={`rounded-lg bg-${item.statusColor} p-2 text-xs font-medium text-${item.statusColor} capitalize md:mx-8`}
                 >
                   {item.status}
                 </div>

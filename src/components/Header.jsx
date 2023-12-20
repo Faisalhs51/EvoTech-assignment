@@ -13,6 +13,8 @@ import { MdDocumentScanner } from "react-icons/md";
 import { useContext, useState } from "react";
 import { MenuContext } from "../context";
 
+import { motion } from "framer-motion";
+
 const Header = () => {
   const { menu, setMenu } = useContext(MenuContext);
   const [subMenu, setSubMenu] = useState(false);
@@ -28,7 +30,12 @@ const Header = () => {
   return (
     <header>
       {menu && (
-        <div className="absolute left-0 top-0 z-10 h-full w-[80%] bg-[#1E1E2D] px-8 py-4 text-white md:w-[23%]">
+        <motion.div
+          initial={{ x: "-100%", opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          className="absolute left-0 top-0 z-10 h-full w-[80%] bg-[#1E1E2D] px-8 py-4 text-white md:w-[23%]"
+        >
           <div className="flex items-center justify-between md:flex-wrap">
             <h3 className="text-3xl font-extrabold uppercase">Dashboard</h3>
             <IoIosArrowBack
@@ -51,7 +58,11 @@ const Header = () => {
               <FaChevronDown className="ml-auto" />
             </div>
             {subMenu && (
-              <div>
+              <motion.div
+                initial={{ y: "-50%", opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.5 }}
+              >
                 <ul className="ml-4 mt-4 flex flex-col gap-4">
                   <li className="flex cursor-pointer justify-between text-xs text-[#888C9F]">
                     <p>- Users</p>
@@ -66,7 +77,7 @@ const Header = () => {
                     <IoIosArrowForward />
                   </li>
                 </ul>
-              </div>
+              </motion.div>
             )}
           </div>
           <div className="mt-4 flex items-center gap-4 text-[#888C9F]">
@@ -74,7 +85,7 @@ const Header = () => {
             <p>Pages</p>
             <IoIosArrowForward className="ml-auto cursor-pointer" />
           </div>
-        </div>
+        </motion.div>
       )}
       <div className="flex h-20 items-center justify-between gap-4 bg-white px-4">
         <button onClick={handleMenuShow}>

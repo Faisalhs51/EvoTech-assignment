@@ -16,7 +16,7 @@ const Widget2 = () => {
           {widget2.map((color, index) => {
             return (
               <div className="flex gap-2" key={index}>
-                <div className={`h-10 w-10 rounded-xl bg-[#${color}]`}></div>
+                <div className={`h-10 w-10 rounded-xl bg-${color}`}></div>
                 <div className="flex flex-col">
                   <p className="text-sm font-medium">Briviba Saas</p>
                   <p className="text-xs font-medium text-[#B5B5C3]">
