@@ -51,6 +51,8 @@ const Widget3 = () => {
                   </p>
                   <p className="text-sm font-medium text-[#B5B5C3]">Paid</p>
                 </div>
+                {/* text can be text-approved or text-success or text-progress or text-rejected */}
+                {/* bg can be bg-approved or bg-success or bg-progress or bg-rejected */}
                 <div
                   className={`rounded-lg bg-${item.statusColor} p-2 text-xs font-medium text-${item.statusColor} capitalize md:mx-8`}
                 >
