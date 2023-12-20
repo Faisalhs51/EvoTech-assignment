@@ -10,7 +10,7 @@ import { FaChevronDown } from "react-icons/fa6";
 import { IoIosArrowForward } from "react-icons/io";
 import { MdDocumentScanner } from "react-icons/md";
 
-import { useContext, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { MenuContext } from "../context";
 
 import { motion } from "framer-motion";
@@ -19,7 +19,11 @@ const Header = () => {
   const { menu, setMenu } = useContext(MenuContext);
   const [subMenu, setSubMenu] = useState(false);
 
+  const body = useRef(document.body);
   const handleMenuShow = () => {
+    menu
+      ? (body.current.style.overflowY = "auto")
+      : (body.current.style.overflowY = "hidden");
     setMenu(!menu);
   };
 
